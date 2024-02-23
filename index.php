@@ -13,19 +13,13 @@ require_once('./operations.php');
 <body>
     <h1 class="text-center my-3">Registration Form</h1>
 
-    <div class="container">
-        <!-- <form action="" class="w-50">
-            <div class="form-group my-4">
-                <input type="text" name="username" placeholder="Username" class="form-control">
-            </div>
-            <div class="form-group my-4">
-                <input type="text" name="mobile" placeholder="Mobile" class="form-control">
-            </div>
-        </form> -->
-        <?php inputFields("Username","username","","text") ?>
-        <?php inputFields("Mobile","mobile","","text") ?>
-        <?php inputFields("Username","username","","text") ?>
-
+    <div class="container d-flex justify-content-center">
+        <form action="display.php" method="post" class="w-50" enctype="multipart/form-data">
+            <?php inputFields("Username","username","","text") ?>
+            <?php inputFields("Mobile","mobile","","text") ?>
+            <?php inputFields("","file","","file") ?>
+            <button class="btn btn-dark" type="submit" name="submit">Submit</button>
+        </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
